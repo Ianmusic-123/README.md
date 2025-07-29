@@ -15,13 +15,12 @@ if hist_button:
     
     st.plotly_chart(fig, use_container_width=True)
 
-car_data = pd.read_csv('vehicles_us.csv')
 disp_button = st.button('Construir gráfico de dispersión')
 
 if disp_button:
 
     st.write('Creación de un grafico de dispersión para el conjunto de datos de costos de coches')
 
-    fig = px.scatter(car_data, x="odometer", y="price")
+    fig = px.scatter(car_data, x="model", y="price")
 
     st.plotly_chart(fig, use_container_width=True)
